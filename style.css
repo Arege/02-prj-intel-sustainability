@@ -1,1 +1,81 @@
-/* Add your CSS here */
+/* Hero Section */
+#hero {
+  background-color: black;
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  height: 75vh; /* Full viewport height */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  color: #02C7FD; /* Text color */
+  text-align: center; /* Center text */
+}
+
+h1 {
+  font-size: 3rem; /* Font size for the heading */
+  margin: 0; /* Remove default margin */
+  padding: 20px; /* Add padding around the heading */
+}
+
+img {
+  max-width: 100%; /* Make the image responsive */
+  height: 200px; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below the image */
+  margin: 0 auto; /* Center the image horizontally */
+  object-fit: cover; /* Ensure the image fits its container */
+}
+/* Timeline Cards Section */
+.timeline-cards {
+  display: flex; /* Use Flexbox to align cards in a row */
+  flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Add space between the cards */
+  padding: 20px; /* Add padding around the section */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  justify-content: flex-start; /* Align cards to the left */
+  align-items: stretch; /* Make all cards the same height */
+}
+
+/* Individual Cards */
+.timeline-cards div {
+  flex: 0 0 300px; /* Set a fixed width for each card */
+  background-color: #f9f9f9; /* Light background color for cards */
+  border: 1px solid #ccc; /* Add a border around each card */
+  border-radius: 8px; /* Slightly round the corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 15px; /* Add padding inside each card */
+  text-align: center; /* Center-align text inside the cards */
+}
+
+/* Ensure images fit within their cards */
+.timeline-cards img {
+  max-width: 100%; /* Make the image fit the width of its container */
+  height: 200px; /* Maintain the image's aspect ratio */
+  object-fit: cover;
+  display: block; /* Remove extra space below the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Hover Effect for Paragraphs */
+.timeline-cards p {
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.timeline-cards p:hover {
+  color: white; /* Change text color on hover */
+  background-color: #0071c5; /* Add a background color on hover */
+  padding: 5px; /* Add some padding for better visibility */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+/* Responsive Behavior for Mobile Screens */
+@media (max-width: px) {
+  .timeline-cards {
+    flex-wrap: wrap; /* Allow cards to stack vertically */
+    justify-content: center; /* Center-align cards on smaller screens */
+  }
+
+  .timeline-cards div {
+    flex: 1 1 100%; /* Make each card take full width */
+    margin-bottom: 20px; /* Add space between stacked cards */
+  }
+}
